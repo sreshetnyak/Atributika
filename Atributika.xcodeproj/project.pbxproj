@@ -453,7 +453,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = Atributika;
 				TargetAttributes = {
 					1B2F838C1E5C98A4009AFBCA = {

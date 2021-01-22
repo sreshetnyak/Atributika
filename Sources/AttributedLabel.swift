@@ -9,14 +9,6 @@ import Foundation
 import UIKit
 
 @IBDesignable open class AttributedLabel: UIView {
-
-    open override func prepareForInterfaceBuilder() {
-        super.prepareForInterfaceBuilder()
-        let gray = Style("gray").foregroundColor(.gray)
-        attributedText = "<gray>Attributed</gray>Label"
-            .style(tags: gray)
-        invalidateIntrinsicContentSize()
-    }
     
     //MARK: - private properties
     private let textView = UITextView()

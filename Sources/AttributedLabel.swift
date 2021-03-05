@@ -3,26 +3,24 @@
 //  Copyright © 2017 Atributika. All rights reserved.
 //
 import Foundation
-
-#if os(iOS)
-
 import UIKit
 
-@IBDesignable open class AttributedLabel: UIView {
+@IBDesignable
+open class AttributedLabel: UIView {
     
-    //MARK: - private properties
+    // MARK: - private properties
     private let textView = UITextView()
     private var detectionAreaButtons = [DetectionAreaButton]()
     
-    //MARK: - public properties
-    open var onClick: ((AttributedLabel, Detection)->Void)?
+    // MARK: - public properties
+    open var onClick: ((AttributedLabel, Detection) -> Void)?
 
     open func rects(for detection: Detection) -> [CGRect] {
         var result = [CGRect]()
 
         if let attributedText = state.attributedText {
             let nsrange = NSRange(detection.range, in: attributedText.string)
-            textView.layoutManager.enumerateEnclosingRects(forGlyphRange: nsrange, withinSelectedGlyphRange: NSRange(location: NSNotFound, length: 0), in: textView.textContainer, using: { (rect, stop) in
+            textView.layoutManager.enumerateEnclosingRects(forGlyphRange: nsrange, withinSelectedGlyphRange: NSRange(location: NSNotFound, length: 0), in: textView.textContainer, using: { rect, _ in
                 result.append(rect)
             })
         }
@@ -31,12 +29,12 @@ import UIKit
     }
     
     @IBInspectable open var isEnabled: Bool {
-        set {
-            detectionAreaButtons.forEach { $0.isUserInteractionEnabled = newValue  }
-            state.isEnabled = newValue
-        }
         get {
             return state.isEnabled
+        }
+        set {
+            detectionAreaButtons.forEach({ $0.isUserInteractionEnabled = newValue })
+            state.isEnabled = newValue
         }
     }
     
@@ -51,38 +49,37 @@ import UIKit
     }
     
     open var attributedText: AttributedText? {
+        get {
+            return state.attributedText
+        }
         set {
             state = State(attributedText: newValue, isEnabled: state.isEnabled, detection: nil)
             setNeedsLayout()
         }
-        get {
-            return state.attributedText
-        }
     }
     
     @IBInspectable open var numberOfLines: Int {
-        set { textView.textContainer.maximumNumberOfLines = newValue }
         get { return textView.textContainer.maximumNumberOfLines }
+        set { textView.textContainer.maximumNumberOfLines = newValue }
     }
     
-    @IBInspectable open var lineBreakMode: NSLineBreakMode {
-        set { textView.textContainer.lineBreakMode = newValue }
+    open var lineBreakMode: NSLineBreakMode {
         get { return textView.textContainer.lineBreakMode }
+        set { textView.textContainer.lineBreakMode = newValue }
     }
     
-    @available(iOS 10.0, *)
     @IBInspectable open var adjustsFontForContentSizeCategory: Bool {
-        set { textView.adjustsFontForContentSizeCategory = newValue }
         get { return textView.adjustsFontForContentSizeCategory }
+        set { textView.adjustsFontForContentSizeCategory = newValue }
     }
     
-    @IBInspectable open var font: UIFont = .preferredFont(forTextStyle: .body) {
+    open var font: UIFont = .preferredFont(forTextStyle: .body) {
         didSet {
             updateText()
         }
     }
     
-    @IBInspectable open var textAlignment: NSTextAlignment = .natural {
+    open var textAlignment: NSTextAlignment = .natural {
         didSet {
             updateText()
         }
@@ -106,7 +103,7 @@ import UIKit
         }
     }
     
-    @IBInspectable open var shadowOffset = CGSize(width: 0, height: -1) {
+    open var shadowOffset = CGSize(width: 0, height: -1) {
         didSet {
             updateText()
         }
@@ -118,7 +115,7 @@ import UIKit
         }
     }
     
-    //MARK: - init
+    // MARK: - init
     public override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -136,8 +133,8 @@ import UIKit
         numberOfLines = 1
 
         textView.isUserInteractionEnabled = false
-        textView.textContainer.lineFragmentPadding = 0;
-        textView.textContainerInset = .zero;
+        textView.textContainer.lineFragmentPadding = 0
+        textView.textContainerInset = .zero
         textView.isEditable = false
         textView.isScrollEnabled = false
         textView.isSelectable = false
@@ -145,18 +142,13 @@ import UIKit
         
         textView.translatesAutoresizingMaskIntoConstraints = false
         
-        if #available(iOS 9.0, *) {
-            textView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-            textView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-            textView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-            textView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
-        } else {
-            addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[textView]|", options: [], metrics: nil, views: ["textView": textView]))
-            addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[textView]|", options: [], metrics: nil, views: ["textView": textView]))
-        }
+        textView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        textView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        textView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+        textView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
     }
     
-    //MARK: - overrides
+    // MARK: - overrides
     open override func layoutSubviews() {
         super.layoutSubviews()
         
@@ -172,7 +164,7 @@ import UIKit
             
             highlightableDetections.forEach { detection in
                 let nsrange = NSRange(detection.range, in: attributedText.string)
-                textView.layoutManager.enumerateEnclosingRects(forGlyphRange: nsrange, withinSelectedGlyphRange: NSRange(location: NSNotFound, length: 0), in: textView.textContainer, using: { (rect, stop) in
+                textView.layoutManager.enumerateEnclosingRects(forGlyphRange: nsrange, withinSelectedGlyphRange: NSRange(location: NSNotFound, length: 0), in: textView.textContainer, using: { rect, _ in
                     self.addDetectionAreaButton(frame: rect, detection: detection, text: String(attributedText.string[detection.range]))
                 })
             }
@@ -191,12 +183,13 @@ import UIKit
         return textView
     }
     
-    //MARK: - DetectionAreaButton
+    // MARK: - DetectionAreaButton
     private class DetectionAreaButton: UIButton {
         
-        var onHighlightChanged: ((DetectionAreaButton)->Void)?
+        var onHighlightChanged: ((DetectionAreaButton) -> Void)?
         
         let detection: Detection
+        
         init(detection: Detection) {
             self.detection = detection
             super.init(frame: .zero)
@@ -211,6 +204,7 @@ import UIKit
             }
         }
         
+        @available(*, unavailable)
         required init?(coder aDecoder: NSCoder) {
             fatalError("init(coder:) has not been implemented")
         }
@@ -220,11 +214,7 @@ import UIKit
         let button = DetectionAreaButton(detection: detection)
         button.accessibilityLabel = text
         button.isAccessibilityElement = true
-        #if swift(>=4.2)
         button.accessibilityTraits = UIAccessibilityTraits.button
-        #else
-        button.accessibilityTraits = UIAccessibilityTraitButton
-        #endif
         
         button.isUserInteractionEnabled = state.isEnabled
         button.addTarget(self, action: #selector(handleDetectionAreaButtonClick), for: .touchUpInside)
@@ -238,12 +228,12 @@ import UIKit
         button.frame = frame
     }
     
-    @objc private func handleDetectionAreaButtonClick(_ sender: DetectionAreaButton) {
+    @objc
+    private func handleDetectionAreaButtonClick(_ sender: DetectionAreaButton) {
         onClick?(self, sender.detection)
     }
     
-    //MARK: - state
-    
+    // MARK: - state
     private struct State {
         var attributedText: AttributedText?
         var isEnabled: Bool
@@ -261,16 +251,16 @@ import UIKit
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = textAlignment
         
-        var inheritedAttributes = [AttributedStringKey.font: font as Any,
-                                   AttributedStringKey.paragraphStyle: paragraphStyle as Any,
-                                   AttributedStringKey.foregroundColor: textColor]
+        var inheritedAttributes = [NSAttributedString.Key.font: font as Any,
+                                   NSAttributedString.Key.paragraphStyle: paragraphStyle as Any,
+                                   NSAttributedString.Key.foregroundColor: textColor]
         
         if let shadowColor = shadowColor {
             let shadow = NSShadow()
             shadow.shadowColor = shadowColor
             shadow.shadowOffset = shadowOffset
             shadow.shadowBlurRadius = shadowBlurRadius
-            inheritedAttributes[AttributedStringKey.shadow] = shadow
+            inheritedAttributes[NSAttributedString.Key.shadow] = shadow
         }
         
         let length = string.length
@@ -278,26 +268,21 @@ import UIKit
         
         result.beginEditing()
         
-        string.enumerateAttributes(in: NSMakeRange(0, length), options: .longestEffectiveRangeNotRequired, using: { (attributes, range, _) in
+        string.enumerateAttributes(in: NSMakeRange(0, length), options: .longestEffectiveRangeNotRequired, using: { attributes, range, _ in
             result.addAttributes(attributes, range: range)
         })
         result.endEditing()
         
+        let shouldAdjustsFontForContentSizeCategory = textView.adjustsFontForContentSizeCategory
         
-        if #available(iOS 10.0, *) {
-            let shouldAdjustsFontForContentSizeCategory = textView.adjustsFontForContentSizeCategory
-            
-            if shouldAdjustsFontForContentSizeCategory {
-                textView.adjustsFontForContentSizeCategory = false
-            }
-            
-            textView.attributedText = result
-            
-            if shouldAdjustsFontForContentSizeCategory {
-                textView.adjustsFontForContentSizeCategory = true
-            }
-        } else {
-            textView.attributedText = string
+        if shouldAdjustsFontForContentSizeCategory {
+            textView.adjustsFontForContentSizeCategory = false
+        }
+        
+        textView.attributedText = result
+        
+        if shouldAdjustsFontForContentSizeCategory {
+            textView.adjustsFontForContentSizeCategory = true
         }
     }
     
@@ -320,5 +305,3 @@ import UIKit
         }
     }
 }
-
-#endif

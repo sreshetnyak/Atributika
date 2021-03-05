@@ -9,7 +9,7 @@ import Atributika
 
 func stringWithAtributikaLogo() -> NSAttributedString {
     
-    let redColor = UIColor(red:(0xD0 / 255.0), green: (0x02 / 255.0), blue:(0x1B / 255.0), alpha:1.0)
+    let redColor = UIColor(red: (0xD0 / 255.0), green: (0x02 / 255.0), blue: (0x1B / 255.0), alpha: 1.0)
     let a = Style("a").foregroundColor(redColor)
     
     let font = UIFont(name: "AvenirNext-Regular", size: 24)!
@@ -72,13 +72,7 @@ func stringWithManyDetectables() -> NSAttributedString {
     let phoneNumbers = Style.backgroundColor(.yellow)
     let mentions = Style.font(.italicSystemFont(ofSize: 12)).foregroundColor(.black)
     let b = Style("b").font(.boldSystemFont(ofSize: 12))
-    
-    #if swift(>=4.2)
     let u = Style("u").underlineStyle(.single)
-    #else
-    let u = Style("u").underlineStyle(.styleSingle)
-    #endif
-    
     
     let all = Style.font(.systemFont(ofSize: 12)).foregroundColor(.gray)
     
@@ -95,11 +89,7 @@ func stringWithManyDetectables() -> NSAttributedString {
 }
 
 func stringWith3Tags() -> NSAttributedString {
-    
-    let str = "<r>first</r><g>sec⚽️nd</g><b>third</b>".style(tags:
-        Style("r").foregroundColor(.red),
-                                                            Style("g").foregroundColor(.green),
-                                                            Style("b").foregroundColor(.blue)).attributedString
+    let str = "<r>first</r><g>sec⚽️nd</g><b>third</b>".style(tags: Style("r").foregroundColor(.red), Style("g").foregroundColor(.green), Style("b").foregroundColor(.blue)).attributedString
     return str
 }
 
@@ -128,7 +118,7 @@ func stringWithTagAndHashtag() -> NSAttributedString {
     
     let str = "<b>Hello</b> #World"
     let data = str.data(using: .utf8)
-    let options: [NSAttributedString.DocumentReadingOptionKey: Any] = [NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html,NSAttributedString.DocumentReadingOptionKey.characterEncoding: String.Encoding.utf8.rawValue]
+    let options: [NSAttributedString.DocumentReadingOptionKey: Any] = [NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html, NSAttributedString.DocumentReadingOptionKey.characterEncoding: String.Encoding.utf8.rawValue]
     
     let htmlAttrString = try! NSAttributedString(data: data!, options: options, documentAttributes: nil)
     let result = htmlAttrString.styleHashtags(Style.foregroundColor(.blue)).attributedString
@@ -203,11 +193,11 @@ func stringWithImage() -> NSAttributedString {
     for detection in str.detections {
         switch detection.type {
         case .tag(let tag):
-            if let imageId =  tag.attributes["id"] {
+            if let imageId = tag.attributes["id"] {
                 let textAttachment = NSTextAttachment()
                 textAttachment.image = UIImage(named: imageId)
                 let imageAttrStr = NSAttributedString(attachment: textAttachment)
-                let nsrange = NSRange.init(detection.range, in: mutableAttrStr.string)
+                let nsrange = NSRange(detection.range, in: mutableAttrStr.string)
                 mutableAttrStr.insert(imageAttrStr, at: nsrange.location + locationShift)
                 locationShift += 1
             }
@@ -221,16 +211,13 @@ func stringWithImage() -> NSAttributedString {
 
 func stringWithStrikethrough() -> NSAttributedString {
     let all = Style.font(.systemFont(ofSize: 20))
-    #if swift(>=4.2)
+    
     let strike = Style("strike").strikethroughStyle(.single).strikethroughColor(.black)
-    #else
-    let strike = Style("strike").strikethroughStyle(.styleSingle).strikethroughColor(.black)
-    #endif
     
     let code = Style("code").foregroundColor(.red)
     
     let str = "<code>my code</code> <strike>test</strike> testing"
-        .style(tags: [strike,code])
+        .style(tags: [strike, code])
         .styleAll(all)
         .attributedString
     return str
@@ -252,7 +239,7 @@ func stringWithColors() -> NSAttributedString {
 func stringWithParagraph() -> NSAttributedString {
     let p = Style("p").font(UIFont(name: "HelveticaNeue", size: 20)!)
     let strong = Style("strong").font(UIFont(name: "Copperplate", size: 20)!)
-    let str = "<p>some string... <strong> string</strong></p>".style(tags: [p,strong]).attributedString
+    let str = "<p>some string... <strong> string</strong></p>".style(tags: [p, strong]).attributedString
     return str
 }
 
@@ -306,4 +293,3 @@ func allSnippets() -> [NSAttributedString] {
         stringWithIndentedList()
     ]
 }
-

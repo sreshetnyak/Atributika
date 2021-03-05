@@ -43,14 +43,14 @@ public struct Detection {
 }
 
 public protocol AttributedTextProtocol {
-    var string: String {get}
-    var detections: [Detection] {get}
-    var baseStyle: Style {get}
+    var string: String { get }
+    var detections: [Detection] { get }
+    var baseStyle: Style { get }
 }
 
-extension AttributedTextProtocol {
+fileprivate extension AttributedTextProtocol {
     
-    fileprivate func makeAttributedString(getAttributes: (Style)-> [AttributedStringKey: Any]) -> NSAttributedString {
+    func makeAttributedString(getAttributes: (Style)-> [NSAttributedString.Key: Any]) -> NSAttributedString {
         let attributedString = NSMutableAttributedString(string: string, attributes: getAttributes(baseStyle))
         
         let sortedDetections = detections.sorted {
@@ -59,7 +59,7 @@ extension AttributedTextProtocol {
         
         for d in sortedDetections {
             let attrs = getAttributes(d.style)
-            if attrs.count > 0 {
+            if !attrs.isEmpty {
                 attributedString.addAttributes(attrs, range: NSRange(d.range, in: string))
             }
         }
@@ -80,71 +80,65 @@ public final class AttributedText: AttributedTextProtocol {
         self.baseStyle = baseStyle
     }
 
-    public lazy private(set) var attributedString: NSAttributedString  = {
+    public lazy private(set) var attributedString: NSAttributedString = {
         makeAttributedString { $0.attributes }
     }()
 
-    public lazy private(set) var disabledAttributedString: NSAttributedString  = {
+    public lazy private(set) var disabledAttributedString: NSAttributedString = {
         makeAttributedString { $0.disabledAttributes }
     }()
 }
 
-extension AttributedTextProtocol {
+public extension AttributedTextProtocol {
     
     /// style the whole string
-    public func styleAll(_ style: Style) -> AttributedText {
+    func styleAll(_ style: Style) -> AttributedText {
         return AttributedText(string: string, detections: detections, baseStyle: baseStyle.merged(with: style))
     }
     
     /// style things like #xcode #mentions
-    public func styleHashtags(_ style: Style) -> AttributedText {
+    func styleHashtags(_ style: Style) -> AttributedText {
         let ranges = string.detectHashTags()
         let ds = ranges.map { Detection(type: .hashtag(String(string[(string.index($0.lowerBound, offsetBy: 1))..<$0.upperBound])), style: style, range: $0, level: Int.max) }
         return AttributedText(string: string, detections: detections + ds, baseStyle: baseStyle)
     }
     
     /// style things like @John @all
-    public func styleMentions(_ style: Style) -> AttributedText {
+    func styleMentions(_ style: Style) -> AttributedText {
         let ranges = string.detectMentions()
         let ds = ranges.map { Detection(type: .mention(String(string[(string.index($0.lowerBound, offsetBy: 1))..<$0.upperBound])), style: style, range: $0, level: Int.max) }
         return AttributedText(string: string, detections: detections + ds, baseStyle: baseStyle)
     }
     
-    public func style(regex: String, options: NSRegularExpression.Options = [], style: Style) -> AttributedText {
+    func style(regex: String, options: NSRegularExpression.Options = [], style: Style) -> AttributedText {
         let ranges = string.detect(regex: regex, options: options)
         let ds = ranges.map { Detection(type: .regex(regex), style: style, range: $0, level: Int.max) }
         return AttributedText(string: string, detections: detections + ds, baseStyle: baseStyle)
     }
     
-    public func style(textCheckingTypes: NSTextCheckingResult.CheckingType, style: Style) -> AttributedText {
+    func style(textCheckingTypes: NSTextCheckingResult.CheckingType, style: Style) -> AttributedText {
         let ranges = string.detect(textCheckingTypes: textCheckingTypes)
         let ds = ranges.map { Detection(type: .textCheckingType(String(string[$0]), textCheckingTypes), style: style, range: $0, level: Int.max) }
         return AttributedText(string: string, detections: detections + ds, baseStyle: baseStyle)
     }
     
-    public func stylePhoneNumbers(_ style: Style) -> AttributedText {
+    func stylePhoneNumbers(_ style: Style) -> AttributedText {
         let ranges = string.detect(textCheckingTypes: [.phoneNumber])
         let ds = ranges.map { Detection(type: .phoneNumber(String(string[$0])), style: style, range: $0, level: Int.max) }
         return AttributedText(string: string, detections: detections + ds, baseStyle: baseStyle)
     }
     
-    public func styleLinks(_ style: Style) -> AttributedText {
+    func styleLinks(_ style: Style) -> AttributedText {
         let ranges = string.detect(textCheckingTypes: [.link])
         
-        #if swift(>=4.1)
         let ds = ranges.compactMap { range in
             URL(string: String(string[range])).map { Detection(type: .link($0), style: style, range: range, level: Int.max) }
         }
-        #else
-        let ds = ranges.flatMap { range in
-            URL(string: String(string[range])).map { Detection(type: .link($0), style: style, range: range) }
-        }
-        #endif
         
         return AttributedText(string: string, detections: detections + ds, baseStyle: baseStyle)
     }
     
-    public func style(range: Range<String.Index>, style: Style) -> AttributedText {
+    func style(range: Range<String.Index>, style: Style) -> AttributedText {
         let d = Detection(type: .range, style: style, range: range, level: Int.max)
         return AttributedText(string: string, detections: detections + [d], baseStyle: baseStyle)
     }
@@ -164,7 +158,7 @@ extension String: AttributedTextProtocol {
         return Style()
     }
     
-    public func style(tags: [Style], transformers: [TagTransformer] = [TagTransformer.brTransformer], tuner: (Style, Tag) -> Style = { s, _ in return  s}) -> AttributedText {
+    public func style(tags: [Style], transformers: [TagTransformer] = [TagTransformer.brTransformer], tuner: (Style, Tag) -> Style = { s, _ in return  s }) -> AttributedText {
         let (string, tagsInfo) = detectTags(transformers: transformers)
         
         var ds: [Detection] = []
@@ -181,7 +175,7 @@ extension String: AttributedTextProtocol {
         return AttributedText(string: string, detections: ds, baseStyle: baseStyle)
     }
     
-    public func style(tags: Style..., transformers: [TagTransformer] = [TagTransformer.brTransformer], tuner: (Style, Tag) -> Style = { s, _ in return  s}) -> AttributedText {
+    public func style(tags: Style..., transformers: [TagTransformer] = [TagTransformer.brTransformer], tuner: (Style, Tag) -> Style = { s, _ in return  s }) -> AttributedText {
         return style(tags: tags, transformers: transformers, tuner: tuner)
     }
 
@@ -199,8 +193,7 @@ extension NSAttributedString: AttributedTextProtocol {
     public var detections: [Detection] {
         
         var ds: [Detection] = []
-        
-        enumerateAttributes(in: NSMakeRange(0, length), options: []) { (attributes, range, _) in
+        enumerateAttributes(in: NSMakeRange(0, length), options: []) { attributes, range, _ in
             if let range = Range(range, in: self.string) {
                 ds.append(Detection(type: .range, style: Style("", attributes), range: range, level: Int.max))
             }

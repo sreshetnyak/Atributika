@@ -32,7 +32,6 @@ class IBViewController: UIViewController {
         }
         attributedLabel.attributedText = "Hello! <button>Need to register?</button>".style(tags: button).styleAll(.font(.systemFont(ofSize: 12)))
         
-        
        setupTopLabels()
     }
     
@@ -50,7 +49,7 @@ class IBViewController: UIViewController {
             .style(tags: button)
             .styleAll(.font(.systemFont(ofSize: 30)))
         
-        issue103Label.onClick = { label, detection in
+        issue103Label.onClick = { _, detection in
             print(detection)
         }
 

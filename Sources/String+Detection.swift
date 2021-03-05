@@ -40,7 +40,7 @@ public struct TagTransformer {
     }
     
     public static var brTransformer: TagTransformer {
-        return TagTransformer(tagName: "br", tagType: .start , replaceValue: "\n")
+        return TagTransformer(tagName: "br", tagType: .start, replaceValue: "\n")
     }
 }
 
@@ -161,30 +161,6 @@ extension String {
                             resultString.append("<")
                         }
                     }
-                } else if scanner.scanString("&") != nil {
-                    if scanner.scanString("#") != nil {
-                        if let potentialSpecial = scanner.scanCharacters(from: CharacterSet.alphanumerics) {
-                            if scanner.scanString(";") != nil {
-                                resultString.append(potentialSpecial.unescapeAsNumber() ?? "&#\(potentialSpecial);")
-                            } else {
-                                resultString.append("&#")
-                                resultString.append(potentialSpecial)
-                            }
-                        } else {
-                            resultString.append("&#")
-                        }
-                    } else {
-                        if let potentialSpecial = scanner.scanCharacters(from: CharacterSet.letters) {
-                            if scanner.scanString(";") != nil {
-                                resultString.append(HTMLSpecial(for: potentialSpecial) ?? "&\(potentialSpecial);")
-                            } else {
-                                resultString.append("&")
-                                resultString.append(potentialSpecial)
-                            }
-                        } else {
-                            resultString.append("&")
-                        }
-                    }
                 }
             }
         }
@@ -207,7 +183,7 @@ extension String {
         var ranges = [Range<String.Index>]()
         
         let dataDetector = try? NSRegularExpression(pattern: regex, options: options)
-        dataDetector?.enumerateMatches(in: self, options: [], range: NSMakeRange(0, (self as NSString).length), using: { (result, flags, _) in
+        dataDetector?.enumerateMatches(in: self, options: [], range: NSMakeRange(0, (self as NSString).length), using: { result, _, _ in
             if let r = result, let range = Range(r.range, in: self) {
                 ranges.append(range)
             }
@@ -221,7 +197,7 @@ extension String {
         var ranges = [Range<String.Index>]()
         
         let dataDetector = try? NSDataDetector(types: textCheckingTypes.rawValue)
-        dataDetector?.enumerateMatches(in: self, options: [], range: NSMakeRange(0, (self as NSString).length), using: { (result, flags, _) in
+        dataDetector?.enumerateMatches(in: self, options: [], range: NSMakeRange(0, (self as NSString).length), using: { result, _, _ in
             if let r = result, let range = Range(r.range, in: self) {
                 ranges.append(range)
             }

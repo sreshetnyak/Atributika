@@ -28,7 +28,8 @@ extension Scanner {
     }
     
     /// Returns the given string if scanned, or `nil` if not found.
-    @discardableResult func scanString(_ str: String) -> String? {
+    @discardableResult
+    func scanString(_ str: String) -> String? {
         var value: NSString? = ""
         if scanString(str, into: &value) {
             return value as String?

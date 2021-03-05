@@ -5,7 +5,6 @@
 
 import UIKit
 
-
 #if swift(>=4.2)
 typealias ApplicationLaunchOptionsKey = UIApplication.LaunchOptionsKey
 #else
@@ -16,7 +15,6 @@ typealias ApplicationLaunchOptionsKey = UIApplication.LaunchOptionsKey
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [ApplicationLaunchOptionsKey: Any]?) -> Bool {
        
@@ -31,13 +29,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let vc3 = UIStoryboard(name: "IB", bundle: nil).instantiateViewController(withIdentifier: "ib")
         vc3.title = "Storyboard"
        
-        tbc.viewControllers = [UINavigationController(rootViewController: vc1), UINavigationController(rootViewController: vc2), UINavigationController(rootViewController: vc3),]
+        tbc.viewControllers = [UINavigationController(rootViewController: vc1), UINavigationController(rootViewController: vc2), UINavigationController(rootViewController: vc3)]
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = tbc
         window?.makeKeyAndVisible()
 
-        
         return true
     }
 
@@ -62,7 +59,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
-

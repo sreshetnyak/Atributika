@@ -52,5 +52,3 @@ extension SnippetsViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
-
-

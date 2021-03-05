@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B2E55D92192FC8100D2B934 /* HTMLSpecials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2E55D82192FC8100D2B934 /* HTMLSpecials.swift */; };
-		1B2E55DA219321FB00D2B934 /* HTMLSpecials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2E55D82192FC8100D2B934 /* HTMLSpecials.swift */; };
-		1B2E55DB219321FB00D2B934 /* HTMLSpecials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2E55D82192FC8100D2B934 /* HTMLSpecials.swift */; };
-		1B2E55DC219321FB00D2B934 /* HTMLSpecials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2E55D82192FC8100D2B934 /* HTMLSpecials.swift */; };
 		1B2F83901E5C98A4009AFBCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2F838F1E5C98A4009AFBCA /* AppDelegate.swift */; };
 		1B2F83921E5C98A4009AFBCA /* SnippetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2F83911E5C98A4009AFBCA /* SnippetsViewController.swift */; };
 		1B2F83971E5C98A4009AFBCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B2F83961E5C98A4009AFBCA /* Assets.xcassets */; };
@@ -18,35 +14,16 @@
 		1B2F839F1E5C98F0009AFBCA /* Atributika.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* Atributika.framework */; };
 		1B2F83A01E5C98F0009AFBCA /* Atributika.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* Atributika.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1B3836A01F97C224001DB333 /* AttributedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B38369F1F97C224001DB333 /* AttributedLabel.swift */; };
-		1B4638582259FFE400ED5BA9 /* AttributedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B38369F1F97C224001DB333 /* AttributedLabel.swift */; };
-		1B4638592259FFE400ED5BA9 /* AttributedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B38369F1F97C224001DB333 /* AttributedLabel.swift */; };
-		1B46385A2259FFE400ED5BA9 /* AttributedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B38369F1F97C224001DB333 /* AttributedLabel.swift */; };
 		1B80548A23A8ACDF002DCA63 /* IBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B80548923A8ACDF002DCA63 /* IBViewController.swift */; };
 		1B80548C23A8ACF1002DCA63 /* IB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B80548B23A8ACF1002DCA63 /* IB.storyboard */; };
 		1BB55AD11E5C73EF00CE6EAD /* AttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB55ACC1E5C73EF00CE6EAD /* AttributedText.swift */; };
-		1BB55AD21E5C73EF00CE6EAD /* AttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB55ACC1E5C73EF00CE6EAD /* AttributedText.swift */; };
-		1BB55AD31E5C73F000CE6EAD /* AttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB55ACC1E5C73EF00CE6EAD /* AttributedText.swift */; };
-		1BB55AD41E5C73F000CE6EAD /* AttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB55ACC1E5C73EF00CE6EAD /* AttributedText.swift */; };
 		1BB55AD91E5C73F000CE6EAD /* NSScanner+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB55ACE1E5C73EF00CE6EAD /* NSScanner+Swift.swift */; };
-		1BB55ADA1E5C73F000CE6EAD /* NSScanner+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB55ACE1E5C73EF00CE6EAD /* NSScanner+Swift.swift */; };
-		1BB55ADB1E5C73F000CE6EAD /* NSScanner+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB55ACE1E5C73EF00CE6EAD /* NSScanner+Swift.swift */; };
-		1BB55ADC1E5C73F000CE6EAD /* NSScanner+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB55ACE1E5C73EF00CE6EAD /* NSScanner+Swift.swift */; };
 		1BB55ADD1E5C73F000CE6EAD /* String+Detection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB55ACF1E5C73EF00CE6EAD /* String+Detection.swift */; };
-		1BB55ADE1E5C73F000CE6EAD /* String+Detection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB55ACF1E5C73EF00CE6EAD /* String+Detection.swift */; };
-		1BB55ADF1E5C73F000CE6EAD /* String+Detection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB55ACF1E5C73EF00CE6EAD /* String+Detection.swift */; };
-		1BB55AE01E5C73F000CE6EAD /* String+Detection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB55ACF1E5C73EF00CE6EAD /* String+Detection.swift */; };
 		1BB55AE11E5C73F000CE6EAD /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB55AD01E5C73EF00CE6EAD /* Style.swift */; };
-		1BB55AE21E5C73F000CE6EAD /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB55AD01E5C73EF00CE6EAD /* Style.swift */; };
-		1BB55AE31E5C73F000CE6EAD /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB55AD01E5C73EF00CE6EAD /* Style.swift */; };
-		1BB55AE41E5C73F000CE6EAD /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB55AD01E5C73EF00CE6EAD /* Style.swift */; };
 		1BDDF5691E683A8F006374F6 /* Snippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDDF5681E683A8F006374F6 /* Snippet.swift */; };
 		1BDDF56B1E6841EA006374F6 /* AttributedLabelDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDDF56A1E6841EA006374F6 /* AttributedLabelDemoViewController.swift */; };
 		52D6D9871BEFF229002C0205 /* Atributika.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* Atributika.framework */; };
 		52D6D99B1BEFF375002C0205 /* AtributikaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6D9971BEFF375002C0205 /* AtributikaTests.swift */; };
-		DD7502861C68FDDC006590AF /* AtributikaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6D9971BEFF375002C0205 /* AtributikaTests.swift */; };
-		DD7502881C68FEDE006590AF /* Atributika.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6DA0F1BF000BD002C0205 /* Atributika.framework */; };
-		DD7502921C690C7A006590AF /* Atributika.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D9F01BEFFFBE002C0205 /* Atributika.framework */; };
-		DD75029A1C690CBE006590AF /* AtributikaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D6D9971BEFF375002C0205 /* AtributikaTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,20 +40,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 52D6D97B1BEFF229002C0205;
 			remoteInfo = Atributika;
-		};
-		DD7502801C68FCFC006590AF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 52D6D9731BEFF229002C0205 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 52D6DA0E1BF000BD002C0205;
-			remoteInfo = "Atributika-macOS";
-		};
-		DD7502931C690C7A006590AF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 52D6D9731BEFF229002C0205 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 52D6D9EF1BEFFFBE002C0205;
-			remoteInfo = "Atributika-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -95,7 +58,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1B2E55D82192FC8100D2B934 /* HTMLSpecials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HTMLSpecials.swift; path = Sources/HTMLSpecials.swift; sourceTree = "<group>"; };
 		1B2F838D1E5C98A4009AFBCA /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B2F838F1E5C98A4009AFBCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B2F83911E5C98A4009AFBCA /* SnippetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnippetsViewController.swift; sourceTree = "<group>"; };
@@ -114,13 +76,8 @@
 		52D6D97C1BEFF229002C0205 /* Atributika.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Atributika.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9861BEFF229002C0205 /* Atributika-iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Atributika-iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9971BEFF375002C0205 /* AtributikaTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AtributikaTests.swift; path = Tests/AtributikaTests/AtributikaTests.swift; sourceTree = "<group>"; };
-		52D6D9E21BEFFF6E002C0205 /* Atributika.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Atributika.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		52D6D9F01BEFFFBE002C0205 /* Atributika.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Atributika.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		52D6DA0F1BF000BD002C0205 /* Atributika.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Atributika.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD2FAA261CD0B6D800659CF4 /* Atributika.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Atributika.plist; sourceTree = "<group>"; };
 		AD2FAA281CD0B6E100659CF4 /* AtributikaTests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AtributikaTests.plist; sourceTree = "<group>"; };
-		DD75027A1C68FCFC006590AF /* Atributika-macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Atributika-macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD75028D1C690C7A006590AF /* Atributika-tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Atributika-tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,43 +101,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				52D6D9871BEFF229002C0205 /* Atributika.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		52D6D9DE1BEFFF6E002C0205 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		52D6D9EC1BEFFFBE002C0205 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		52D6DA0B1BF000BD002C0205 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DD7502771C68FCFC006590AF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DD7502881C68FEDE006590AF /* Atributika.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DD75028A1C690C7A006590AF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DD7502921C690C7A006590AF /* Atributika.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +139,6 @@
 				1BB55ACC1E5C73EF00CE6EAD /* AttributedText.swift */,
 				1BB55ACE1E5C73EF00CE6EAD /* NSScanner+Swift.swift */,
 				1BB55ACF1E5C73EF00CE6EAD /* String+Detection.swift */,
-				1B2E55D82192FC8100D2B934 /* HTMLSpecials.swift */,
 				1BB55AC11E5C6F2400CE6EAD /* Tests */,
 				52D6D99C1BEFF38C002C0205 /* Configs */,
 				1B2F838E1E5C98A4009AFBCA /* Demo */,
@@ -232,11 +151,6 @@
 			children = (
 				52D6D97C1BEFF229002C0205 /* Atributika.framework */,
 				52D6D9861BEFF229002C0205 /* Atributika-iOS Tests.xctest */,
-				52D6D9E21BEFFF6E002C0205 /* Atributika.framework */,
-				52D6D9F01BEFFFBE002C0205 /* Atributika.framework */,
-				52D6DA0F1BF000BD002C0205 /* Atributika.framework */,
-				DD75027A1C68FCFC006590AF /* Atributika-macOS Tests.xctest */,
-				DD75028D1C690C7A006590AF /* Atributika-tvOS Tests.xctest */,
 				1B2F838D1E5C98A4009AFBCA /* Demo.app */,
 			);
 			name = Products;
@@ -277,27 +191,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		52D6D9DF1BEFFF6E002C0205 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		52D6D9ED1BEFFFBE002C0205 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		52D6DA0C1BF000BD002C0205 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -328,6 +221,7 @@
 				52D6D9781BEFF229002C0205 /* Frameworks */,
 				52D6D9791BEFF229002C0205 /* Headers */,
 				52D6D97A1BEFF229002C0205 /* Resources */,
+				A5B5BDCA25F254C4007525BE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -356,96 +250,6 @@
 			productReference = 52D6D9861BEFF229002C0205 /* Atributika-iOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		52D6D9E11BEFFF6E002C0205 /* Atributika-watchOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 52D6D9E71BEFFF6E002C0205 /* Build configuration list for PBXNativeTarget "Atributika-watchOS" */;
-			buildPhases = (
-				52D6D9DD1BEFFF6E002C0205 /* Sources */,
-				52D6D9DE1BEFFF6E002C0205 /* Frameworks */,
-				52D6D9DF1BEFFF6E002C0205 /* Headers */,
-				52D6D9E01BEFFF6E002C0205 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Atributika-watchOS";
-			productName = "Atributika-watchOS";
-			productReference = 52D6D9E21BEFFF6E002C0205 /* Atributika.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		52D6D9EF1BEFFFBE002C0205 /* Atributika-tvOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 52D6DA011BEFFFBE002C0205 /* Build configuration list for PBXNativeTarget "Atributika-tvOS" */;
-			buildPhases = (
-				52D6D9EB1BEFFFBE002C0205 /* Sources */,
-				52D6D9EC1BEFFFBE002C0205 /* Frameworks */,
-				52D6D9ED1BEFFFBE002C0205 /* Headers */,
-				52D6D9EE1BEFFFBE002C0205 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Atributika-tvOS";
-			productName = "Atributika-tvOS";
-			productReference = 52D6D9F01BEFFFBE002C0205 /* Atributika.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		52D6DA0E1BF000BD002C0205 /* Atributika-macOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 52D6DA201BF000BD002C0205 /* Build configuration list for PBXNativeTarget "Atributika-macOS" */;
-			buildPhases = (
-				52D6DA0A1BF000BD002C0205 /* Sources */,
-				52D6DA0B1BF000BD002C0205 /* Frameworks */,
-				52D6DA0C1BF000BD002C0205 /* Headers */,
-				52D6DA0D1BF000BD002C0205 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Atributika-macOS";
-			productName = "Atributika-macOS";
-			productReference = 52D6DA0F1BF000BD002C0205 /* Atributika.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		DD7502791C68FCFC006590AF /* Atributika-macOS Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DD7502821C68FCFC006590AF /* Build configuration list for PBXNativeTarget "Atributika-macOS Tests" */;
-			buildPhases = (
-				DD7502761C68FCFC006590AF /* Sources */,
-				DD7502771C68FCFC006590AF /* Frameworks */,
-				DD7502781C68FCFC006590AF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DD7502811C68FCFC006590AF /* PBXTargetDependency */,
-			);
-			name = "Atributika-macOS Tests";
-			productName = "Atributika-OS Tests";
-			productReference = DD75027A1C68FCFC006590AF /* Atributika-macOS Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		DD75028C1C690C7A006590AF /* Atributika-tvOS Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DD7502951C690C7A006590AF /* Build configuration list for PBXNativeTarget "Atributika-tvOS Tests" */;
-			buildPhases = (
-				DD7502891C690C7A006590AF /* Sources */,
-				DD75028A1C690C7A006590AF /* Frameworks */,
-				DD75028B1C690C7A006590AF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DD7502941C690C7A006590AF /* PBXTargetDependency */,
-			);
-			name = "Atributika-tvOS Tests";
-			productName = "Atributika-tvOS Tests";
-			productReference = DD75028D1C690C7A006590AF /* Atributika-tvOS Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -453,7 +257,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 1230;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = Atributika;
 				TargetAttributes = {
 					1B2F838C1E5C98A4009AFBCA = {
@@ -468,26 +272,6 @@
 					};
 					52D6D9851BEFF229002C0205 = {
 						CreatedOnToolsVersion = 7.1;
-						LastSwiftMigration = 1020;
-					};
-					52D6D9E11BEFFF6E002C0205 = {
-						CreatedOnToolsVersion = 7.1;
-						LastSwiftMigration = 1020;
-					};
-					52D6D9EF1BEFFFBE002C0205 = {
-						CreatedOnToolsVersion = 7.1;
-						LastSwiftMigration = 1020;
-					};
-					52D6DA0E1BF000BD002C0205 = {
-						CreatedOnToolsVersion = 7.1;
-						LastSwiftMigration = 1020;
-					};
-					DD7502791C68FCFC006590AF = {
-						CreatedOnToolsVersion = 7.2.1;
-						LastSwiftMigration = 1020;
-					};
-					DD75028C1C690C7A006590AF = {
-						CreatedOnToolsVersion = 7.2.1;
 						LastSwiftMigration = 1020;
 					};
 				};
@@ -506,12 +290,7 @@
 			projectRoot = "";
 			targets = (
 				52D6D97B1BEFF229002C0205 /* Atributika-iOS */,
-				52D6DA0E1BF000BD002C0205 /* Atributika-macOS */,
-				52D6D9E11BEFFF6E002C0205 /* Atributika-watchOS */,
-				52D6D9EF1BEFFFBE002C0205 /* Atributika-tvOS */,
 				52D6D9851BEFF229002C0205 /* Atributika-iOS Tests */,
-				DD7502791C68FCFC006590AF /* Atributika-macOS Tests */,
-				DD75028C1C690C7A006590AF /* Atributika-tvOS Tests */,
 				1B2F838C1E5C98A4009AFBCA /* Demo */,
 			);
 		};
@@ -542,42 +321,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		52D6D9E01BEFFF6E002C0205 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		52D6D9EE1BEFFFBE002C0205 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		52D6DA0D1BF000BD002C0205 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DD7502781C68FCFC006590AF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DD75028B1C690C7A006590AF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A5B5BDCA25F254C4007525BE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint >/dev/null; then\n    swiftlint\nelse\n   echo “warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint”\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1B2F83891E5C98A4009AFBCA /* Sources */ = {
@@ -596,7 +360,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B2E55D92192FC8100D2B934 /* HTMLSpecials.swift in Sources */,
 				1BB55AD91E5C73F000CE6EAD /* NSScanner+Swift.swift in Sources */,
 				1BB55AD11E5C73EF00CE6EAD /* AttributedText.swift in Sources */,
 				1B3836A01F97C224001DB333 /* AttributedLabel.swift in Sources */,
@@ -613,61 +376,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		52D6D9DD1BEFFF6E002C0205 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1BB55ADB1E5C73F000CE6EAD /* NSScanner+Swift.swift in Sources */,
-				1BB55AD31E5C73F000CE6EAD /* AttributedText.swift in Sources */,
-				1B2E55DB219321FB00D2B934 /* HTMLSpecials.swift in Sources */,
-				1BB55ADF1E5C73F000CE6EAD /* String+Detection.swift in Sources */,
-				1B4638592259FFE400ED5BA9 /* AttributedLabel.swift in Sources */,
-				1BB55AE31E5C73F000CE6EAD /* Style.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		52D6D9EB1BEFFFBE002C0205 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1BB55ADC1E5C73F000CE6EAD /* NSScanner+Swift.swift in Sources */,
-				1BB55AD41E5C73F000CE6EAD /* AttributedText.swift in Sources */,
-				1B2E55DC219321FB00D2B934 /* HTMLSpecials.swift in Sources */,
-				1BB55AE01E5C73F000CE6EAD /* String+Detection.swift in Sources */,
-				1B46385A2259FFE400ED5BA9 /* AttributedLabel.swift in Sources */,
-				1BB55AE41E5C73F000CE6EAD /* Style.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		52D6DA0A1BF000BD002C0205 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1BB55ADA1E5C73F000CE6EAD /* NSScanner+Swift.swift in Sources */,
-				1BB55AD21E5C73EF00CE6EAD /* AttributedText.swift in Sources */,
-				1B2E55DA219321FB00D2B934 /* HTMLSpecials.swift in Sources */,
-				1BB55ADE1E5C73F000CE6EAD /* String+Detection.swift in Sources */,
-				1B4638582259FFE400ED5BA9 /* AttributedLabel.swift in Sources */,
-				1BB55AE21E5C73F000CE6EAD /* Style.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DD7502761C68FCFC006590AF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DD7502861C68FDDC006590AF /* AtributikaTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DD7502891C690C7A006590AF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DD75029A1C690CBE006590AF /* AtributikaTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -680,16 +388,6 @@
 			isa = PBXTargetDependency;
 			target = 52D6D97B1BEFF229002C0205 /* Atributika-iOS */;
 			targetProxy = 52D6D9881BEFF229002C0205 /* PBXContainerItemProxy */;
-		};
-		DD7502811C68FCFC006590AF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 52D6DA0E1BF000BD002C0205 /* Atributika-macOS */;
-			targetProxy = DD7502801C68FCFC006590AF /* PBXContainerItemProxy */;
-		};
-		DD7502941C690C7A006590AF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 52D6D9EF1BEFFFBE002C0205 /* Atributika-tvOS */;
-			targetProxy = DD7502931C690C7A006590AF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -715,12 +413,12 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				DEVELOPMENT_TEAM = 6UG65RB759;
 				INFOPLIST_FILE = Demo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.psharanda.Atributika.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -734,12 +432,12 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				DEVELOPMENT_TEAM = 6UG65RB759;
 				INFOPLIST_FILE = Demo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.psharanda.Atributika.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -790,7 +488,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -843,7 +541,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 3.0;
@@ -867,14 +565,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Configs/Atributika.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Atributika.Atributika-iOS";
 				PRODUCT_NAME = Atributika;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -891,13 +589,13 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Configs/Atributika.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Atributika.Atributika-iOS";
 				PRODUCT_NAME = Atributika;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -908,12 +606,12 @@
 				CLANG_ENABLE_CODE_COVERAGE = NO;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Configs/AtributikaTests.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Atributika.Atributika-iOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -924,232 +622,12 @@
 				CLANG_ENABLE_CODE_COVERAGE = NO;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Configs/AtributikaTests.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Atributika.Atributika-iOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
-		52D6D9E81BEFFF6E002C0205 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CLANG_ENABLE_CODE_COVERAGE = NO;
-				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Configs/Atributika.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Atributika.Atributika-watchOS";
-				PRODUCT_NAME = Atributika;
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		52D6D9E91BEFFF6E002C0205 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CLANG_ENABLE_CODE_COVERAGE = NO;
-				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Configs/Atributika.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Atributika.Atributika-watchOS";
-				PRODUCT_NAME = Atributika;
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
-		};
-		52D6DA021BEFFFBE002C0205 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CLANG_ENABLE_CODE_COVERAGE = NO;
-				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Configs/Atributika.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Atributika.Atributika-tvOS";
-				PRODUCT_NAME = Atributika;
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-			};
-			name = Debug;
-		};
-		52D6DA031BEFFFBE002C0205 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CLANG_ENABLE_CODE_COVERAGE = NO;
-				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Configs/Atributika.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Atributika.Atributika-tvOS";
-				PRODUCT_NAME = Atributika;
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-			};
-			name = Release;
-		};
-		52D6DA211BF000BD002C0205 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CLANG_ENABLE_CODE_COVERAGE = NO;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Configs/Atributika.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Atributika.Atributika-macOS";
-				PRODUCT_NAME = Atributika;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Debug;
-		};
-		52D6DA221BF000BD002C0205 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CLANG_ENABLE_CODE_COVERAGE = NO;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Configs/Atributika.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Atributika.Atributika-macOS";
-				PRODUCT_NAME = Atributika;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
-		DD7502831C68FCFC006590AF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ENABLE_CODE_COVERAGE = NO;
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Configs/AtributikaTests.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Atributika.Atributika-macOS-Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_VERSION = 4.0;
-			};
-			name = Debug;
-		};
-		DD7502841C68FCFC006590AF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ENABLE_CODE_COVERAGE = NO;
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Configs/AtributikaTests.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Atributika.Atributika-macOS-Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
-		DD7502961C690C7A006590AF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ENABLE_CODE_COVERAGE = NO;
-				INFOPLIST_FILE = Configs/AtributikaTests.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Atributika.Atributika-tvOS-Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SWIFT_VERSION = 4.0;
-				TVOS_DEPLOYMENT_TARGET = 9.1;
-			};
-			name = Debug;
-		};
-		DD7502971C690C7A006590AF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ENABLE_CODE_COVERAGE = NO;
-				INFOPLIST_FILE = Configs/AtributikaTests.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Atributika.Atributika-tvOS-Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TVOS_DEPLOYMENT_TARGET = 9.1;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -1188,51 +666,6 @@
 			buildConfigurations = (
 				52D6D9941BEFF229002C0205 /* Debug */,
 				52D6D9951BEFF229002C0205 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		52D6D9E71BEFFF6E002C0205 /* Build configuration list for PBXNativeTarget "Atributika-watchOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				52D6D9E81BEFFF6E002C0205 /* Debug */,
-				52D6D9E91BEFFF6E002C0205 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		52D6DA011BEFFFBE002C0205 /* Build configuration list for PBXNativeTarget "Atributika-tvOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				52D6DA021BEFFFBE002C0205 /* Debug */,
-				52D6DA031BEFFFBE002C0205 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		52D6DA201BF000BD002C0205 /* Build configuration list for PBXNativeTarget "Atributika-macOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				52D6DA211BF000BD002C0205 /* Debug */,
-				52D6DA221BF000BD002C0205 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DD7502821C68FCFC006590AF /* Build configuration list for PBXNativeTarget "Atributika-macOS Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DD7502831C68FCFC006590AF /* Debug */,
-				DD7502841C68FCFC006590AF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DD7502951C690C7A006590AF /* Build configuration list for PBXNativeTarget "Atributika-tvOS Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DD7502961C690C7A006590AF /* Debug */,
-				DD7502971C690C7A006590AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

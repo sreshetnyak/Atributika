@@ -80,7 +80,7 @@ class TweetCell: UITableViewCell {
     override init(style: TableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
-        tweetLabel.onClick = { label, detection in
+        tweetLabel.onClick = { _, detection in
             switch detection.type {
             case .hashtag(let tag):
                 if let url = URL(string: "https://twitter.com/hashtag/\(tag)") {
@@ -113,6 +113,7 @@ class TweetCell: UITableViewCell {
         tweetLabel.numberOfLines = 0
     }
     
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -133,6 +134,3 @@ class TweetCell: UITableViewCell {
         }
     }
 }
-
-
-
